@@ -1,0 +1,42 @@
+body {
+ // font-weight: $font-weight-light;
+}
+
+h1, h2, h3, h4, h5, h6, button, .intro {
+  font-family: Lato, Arial, sans-serif;
+}
+
+h1 {
+  color: $c-red;
+  letter-spacing: $h1-font-size * 0.009;
+}
+
+h2 {
+  color: $c-red;
+  letter-spacing: $h2-font-size * 0.009;
+}
+
+h3 {
+  color: $c-red;
+  letter-spacing: $h3-font-size * 0.009;
+}
+
+h4 {
+  color: $c-red;
+  letter-spacing: $h4-font-size * 0.009;
+}
+
+h5 {
+  color: $c-red;
+  letter-spacing: $h5-font-size * 0.009;
+}
+
+body {
+  letter-spacing: $font-size-base * 0.009;
+}
+
+@include media-breakpoint-up(sm) {
+  body {
+    line-height: 1.6;
+  }
+}

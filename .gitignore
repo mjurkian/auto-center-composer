@@ -1,0 +1,62 @@
+### Windows ###
+Thumbs.db
+
+### Mac ###
+.DS_Store
+
+### JetBrains ###
+.idea/
+
+### Logs ###
+*.log
+
+### Composer ####
+composer.phar
+/vendor
+
+### Node ###
+/node_modules/
+
+## Sass ###
+.sass-cache
+
+## App config ##
+config.js
+
+### Bin ###
+/bin
+
+### Htaccess ###
+/html/.htaccess
+
+### WP core ###
+/html/wp
+
+### WP config ###
+/production-config.php
+/local-config.php
+/html/db-config.php
+
+### WP uploads ###
+/html/wp-content/uploads
+
+### WP plugins ###
+!/html/wp-content/plugins
+/html/wp-content/plugins/*
+#!/html/wp-content/plugins/advanced-custom-fields-pro/
+
+### WP themes ###
+!/html/wp-content/themes
+/html/wp-content/themes/*
+!/html/wp-content/themes/arvalet/
+/html/wp-content/themes/arvalet/dist/*
+
+### W3TC ###
+/html/wp-content/advanced-cache.php
+/html/wp-content/db.php
+/html/wp-content/object-cache.php
+/html/wp-content/cache/
+/html/wp-content/w3tc-config/
+
+### Allow .gitkeep files ###
+!.gitkeep

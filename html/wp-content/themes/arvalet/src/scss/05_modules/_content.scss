@@ -1,0 +1,318 @@
+.content {
+
+	&__container {
+		@include make-container();
+		@include make-container-max-widths();
+	}
+
+	&__row {
+		@include make-row();
+		margin: 0;
+
+		@include media-breakpoint-up(md) {
+			margin: 0 -15px; 
+		}
+	}
+
+	&__text {
+		margin-bottom: 38px;
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 60px;
+		}
+
+		h2, h3, h4 {
+			margin-bottom: 25px;
+		}
+
+		p {
+			margin-bottom: 30px;
+			font-size: em(18);
+
+			&.intro {
+				font-size: em(26);
+				line-height: 1.4;
+				letter-spacing: $h4-font-size * 0.009;
+
+				@include media-breakpoint-up(md) {
+					font-size: em(32);
+					line-height: 1.3;
+				}
+			}
+		}
+
+		ul {
+			padding-left: 27px;
+			margin-bottom: 36px;
+			li {
+				position: relative;
+				list-style: none;
+				font-size: em(18);
+				margin-bottom: 5px;
+				padding-left: 12px;
+				a {
+					color: $c-blue;
+				}
+			}
+
+		}
+
+		ul li::before {
+			color: $c-red;
+			content: "\2022";
+			display: inline-block;
+			font-size: 31px;
+			left: -25px;
+			position: absolute;
+			top: -11px;
+		}
+
+		@include media-breakpoint-up(md) {
+			@include make-col-ready();
+			@include make-col(8);
+			@include make-col-offset(2);
+
+			p {
+				font-size: em(20);
+			}
+		}
+	}
+
+	&__dual {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		margin-bottom: 38px;
+
+		p:empty {
+			display: none;
+		}
+
+		@include media-breakpoint-up(md) {
+			margin-bottom: 115px;
+		}
+
+		&--text {
+			ul {
+				list-style: none;
+			}
+
+			li {
+				position: relative;
+
+				&:before {
+					content: '';
+					height: 50px;
+					width: 50px;
+
+					background-image: url(icons/checked100.png);
+					background-size: cover;
+
+					transform: scale(.25);
+					
+					transition: all .3s;
+					position: absolute;
+					left: -45px;
+					top: -14px;
+				
+				}
+			}
+		}
+
+
+		&--left {
+			@include make-col-ready();
+			padding: 0;
+
+			.desktop {
+				display: none;
+			}
+
+			.mobile {
+				width: 100%;
+			}
+
+			&.content__dual--text {
+				order: 1;
+			}
+		}
+
+		&--right {
+			@include make-col-ready();
+			padding: 0;
+
+			.desktop {
+				display: none;
+			}
+
+			.mobile {
+				width: 100%;
+			}
+
+		}
+
+		&--image {
+			width: 100%;
+		}
+
+		&--video {
+			margin-bottom: 20px;
+
+			.youtube-player {
+				position: relative;
+				padding-bottom: 56.23%;
+				/* Use 75% for 4:3 videos */
+				height: 0;
+				overflow: hidden;
+				max-width: 100%;
+				background: #000;
+				margin: 0;
+			  }
+			
+			  .youtube-player iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 100;
+				background: transparent;
+			  }
+			
+			  .youtube-player img {
+				bottom: 0;
+				display: block;
+				left: 0;
+				margin: auto;
+				max-width: 100%;
+				width: 100%;
+				position: absolute;
+				right: 0;
+				top: 0;
+				border: none;
+				height: auto;
+				cursor: pointer;
+				-webkit-transition: .4s all;
+				-moz-transition: .4s all;
+				transition: .4s all;
+			  }
+			
+			  .youtube-player img:hover {
+				-webkit-filter: brightness(75%);
+			  }
+			
+			  .youtube-player .play {
+				height: 72px;
+				width: 72px;
+				left: 50%;
+				top: 50%;
+				margin-left: -36px;
+				margin-top: -36px;
+				position: absolute;
+				background: url("icons/play.png") no-repeat;
+				background-size: 70px;
+				cursor: pointer;
+			  }
+			
+			  .play {
+				pointer-events: none;
+			  }
+		}
+
+		h3 {
+			font-size: em(32);
+			margin-bottom: 30px;
+		}
+
+		p {
+			font-size: em(18);
+			margin-bottom: 30px;
+		}
+
+		button {
+			margin-bottom: 48px;
+		}
+
+		img {
+			margin-bottom: 20px;
+		}
+
+
+		&.content__lists {
+			ul {
+				margin: 0;
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			flex-direction: row;
+			justify-content: space-between;
+
+			&.content__lists {
+				align-items: initial;
+				justify-content: center;
+			}
+
+			&--text {	
+				li {
+					&:before {
+						content: '';
+						top: -10px;
+					
+					}
+				}
+			}
+
+			p {
+				font-size: em(20);
+			}
+
+			&--video {
+				.youtube-player {
+					margin: 0;
+				}
+			}
+
+			&--left {
+				@include make-col(6);
+				padding-right: 10px;
+
+				.desktop {
+					display: block;
+				}
+
+				.mobile {
+					display: none;
+				}
+
+				&.content__dual--text {
+					order: 0;
+					@include make-col(5);
+				}
+			}
+
+			&--right {
+				@include make-col(6);
+				padding-left: 10px;
+
+				.desktop {
+					display: block;
+				}
+
+				.mobile {
+					display: none;
+				}
+
+				&.content__dual--text {
+					@include make-col(5);
+					@include make-col-offset(1);
+				}
+			}
+
+			img {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

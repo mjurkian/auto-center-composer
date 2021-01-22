@@ -1,0 +1,37 @@
+/**
+ * ==============
+ * Project config
+ * ==============
+ */
+// Modules
+const path = require("path");
+
+// Wordpress theme name
+const themeName = "arvalet";
+
+// Base config
+const config = module.exports = {
+  srcPath: path.resolve(__dirname, "html/wp-content/themes/" + themeName + "/src/"),
+  distPath: path.resolve(__dirname, "html/wp-content/themes/" + themeName + "/dist"),
+  distPublicPath: "wp-content/themes/" + themeName + "/dist/", // Public url path
+  useBrowserSync: true,
+  strict: false
+}
+
+/**
+ * ----------------
+ * Optional config
+ * ----------------
+ */
+// BrowserSync (if enabled)
+config.browserSync = {
+  host: "localhost",
+  port: 3000,
+  proxy: "http://arvalet.local",
+  files: ["*.css", "*.js"]
+}
+
+// Add JS source paths here for Babel loader
+config.jsSrcPaths = [
+  path.resolve(__dirname, "node_modules/@kukidigital/kuki-accordion")
+]

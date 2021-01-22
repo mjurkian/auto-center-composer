@@ -1,0 +1,102 @@
+.header {
+	&__container {
+		@include make-container-max-widths();
+    	@include make-container();
+	}
+
+	&__row {
+		@include make-row();
+
+		@include media-breakpoint-up(lg) {
+			justify-content: space-between;
+		}
+	}
+
+	&__logo {
+		margin: 0 auto;
+		z-index: 100;
+
+		img {
+			max-height: 110px;
+			padding: 10px 0;
+		}
+
+		@include media-breakpoint-up(lg) {
+			margin: 0;
+
+			img {
+				max-height: 130px;
+			}
+		}
+	}
+}
+
+section.top-arrow {
+	height: 100%;
+	width: 100%;
+
+	background: grey;
+	position: relative;
+	z-index: 100;
+
+	a.footer__arrow-top {
+		position: fixed;
+        bottom: 93px;
+        right: 14px;
+        background: #141a30;
+        width: 50px;
+		height: 50px;
+		//display: block;
+        text-decoration: none;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        border-radius: 35px;
+        display: none;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        z-index: 100;
+		border: 2px solid white;
+
+		i {
+            color: #fff;
+            margin: 0;
+            position: relative;
+            left: 15px;
+            top: 13px;
+            font-size: 25px;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -ms-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+
+
+            &:after {
+                position: relative;
+                display: block;
+                content: '';
+                height: 21px;
+                width: 21px;
+                background: url("icons/right-chevron.svg") 0 0 no-repeat;
+                background-size: 21px;
+                transform: rotate(270deg);
+				left: -3px;
+				top: -2px;
+                transition: all .4s;
+            }
+        }
+        &:hover {
+            background: #2a2a4c;
+        }
+        &:hover i {
+            color: #fff;
+            top: 8px;
+        }
+	}
+
+
+}
+

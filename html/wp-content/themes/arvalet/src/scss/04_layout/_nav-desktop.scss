@@ -1,0 +1,154 @@
+.navOpen {
+  display: none;
+}
+
+.header {
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--appointment {
+      text-align: right;
+      margin-bottom: 20px;
+
+      a {
+        padding: 10px 15px;
+        background: $c-red;
+        color: $c-white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: em(14);
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          background-color: $c-bluewood;
+          box-shadow: 0px 10px 17px rgba(0, 0, 0, 0.3);
+          color: $c-white;
+          transform: translateY(-7px);
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  .menu-main-menu-container { 
+
+    ul {
+      display: flex;
+      list-style: none;
+      
+      align-items: center;
+      padding: 0;
+      margin: 0;
+
+      > li {
+          margin-left: 5px;
+
+          > a {
+            color: $c-blue;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 10px;
+            font-size: em(14);
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+    
+            &:hover, &:active {
+              color: $c-orange;
+              border-bottom: 3px solid $c-bluewood;
+            }
+          }
+      }
+
+      li {
+
+        
+        &.current-menu-item, &.current-page-ancestor {
+					> a {
+            color: $c-orange;
+						border-bottom: 3px solid $c-bluewood;
+					}
+        }
+
+        &.menu-item-has-children {
+          position: relative;
+
+          > a {
+            padding-right: 20px;
+
+            &:after {
+              content: '';
+              height: 12px;
+              width: 12px;
+              background: url("icons/ChevronBlack.png") 0 0 no-repeat;
+              background-size: 12px;
+              transform: rotate(90deg);
+              transition: all .3s;
+  
+              position: absolute;
+              right: 3px;
+              top: 10px;
+            }
+
+          }
+          
+          &:hover {
+            a {
+              color: $c-orange;
+              border-bottom: 3px solid $c-bluewood;
+            }
+            ul.sub-menu {
+              display: block;
+
+              li {
+                background: $c-blue;
+
+                a {
+                  color: $c-white;
+                }
+              }
+            }
+          }
+
+          ul.sub-menu {
+            position: absolute;
+            display: none;
+            bottom: -5px;
+            left: 0;
+            transform: translateX(0) translateY(100%);
+            z-index: 10;
+            height: inherit;
+            width: max-content;
+
+            li {
+              display: flex;
+              margin: 0;
+              padding: 0;
+              text-align: left;
+              
+              a {
+                padding: 10px 10px;
+                width: 100%;
+                border-bottom: 3px solid transparent;
+                &:hover, &:active {
+                  color: $c-orange-light;
+                }
+              }
+
+              &.current-menu-item {
+                a {
+                  color: $c-orange-light;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

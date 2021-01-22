@@ -1,0 +1,36 @@
+{
+  "name": "adelio/arvalet",
+  "description": "WordPress website for Arvalet",
+  "homepage": "https://www.adeliogroup.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "adelio",
+      "homepage": "http://www.adeliogroup.com"
+    }
+  ],
+  "repositories":[
+    {
+      "type":"composer",
+      "url":"https://wpackagist.org"
+    }
+  ],
+  "require": {
+    "php": ">=7",
+    "johnpbloch/wordpress-core-installer": "^1.0",
+    "johnpbloch/wordpress-core": "^5.5.1",
+    "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^2.4.1",
+    "wpackagist-plugin/contact-form-7" : "^5.1.9",
+    "wpackagist-plugin/wordpress-seo" : "^14.3",
+    "wpackagist-plugin/w3-total-cache" : "^0.14.1",
+    "wpackagist-plugin/classic-editor" : "^1.6"
+  },
+  "extra": {
+    "wordpress-install-dir": "html/wp",
+    "installer-paths": {
+      "html/wp-content/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "html/wp-content/plugins/{$name}/": ["type:wordpress-plugin"],
+      "html/wp-content/themes/{$name}/": ["type:wordpress-theme"]
+    }
+  }
+}

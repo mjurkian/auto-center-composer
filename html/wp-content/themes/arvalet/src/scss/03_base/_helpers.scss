@@ -1,0 +1,136 @@
+.skip-links {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+  list-style: outside none;
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    position: absolute;
+    left: -99999px;
+    top: 30px;
+  }
+
+  a:focus,
+  a:active {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #222;
+    background-color: #fff;
+    padding: 0.6em 1em;
+    border: none;
+    outline: 1px solid #000;
+    text-decoration: none;
+    z-index: 1000;
+  }
+}
+
+.accessible-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+/**
+  Rounded input field styling
+ */
+.input-wrapper {
+  display: block;
+  border-radius: 50px;
+  overflow: hidden;
+
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    position: relative;
+    width: 100%;
+
+    font-size: 18px;
+    line-height: 24px;
+
+    background-color: rgba(76, 76, 78, 0.08);
+
+    border: 0;
+    outline: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 20px;
+      line-height: 21px;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    height: 45px;
+    padding: 11px 20px;
+
+    @include media-breakpoint-up(sm) {
+      padding: 16px 20px;
+      height: 54px;
+    }
+  }
+
+  select {
+    z-index: 11;
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+
+  textarea {
+    padding: 23px 20px;
+    resize: none;
+    height: 100%;
+  }
+
+  &--select {
+    position: relative;
+    &:after {
+      content: '';
+      display: inline-block;
+
+      position: absolute;
+      right: 20px;
+      top: 12px;
+
+      border: solid $c-orange-light;
+      border-width: 0 2px 2px 0;
+
+      pointer-events: auto;
+      z-index: 1;
+
+      padding: 6px;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+
+      @include media-breakpoint-up(sm) {
+        right: 28px;
+        top: 16px;
+      }
+    }
+  }
+}

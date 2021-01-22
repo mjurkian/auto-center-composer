@@ -1,0 +1,48 @@
+$bs-container-allow-1440 : true;
+
+@if ($bs-container-allow-1440) {
+  // Grid breakpoints
+  $grid-breakpoints: (
+          xxs: 0,
+          xs: 578px,
+          sm: 768px,
+          md: 1024px,
+          lg: 1200px,
+          xl: 1470px
+  );
+
+  // Grid containers
+  $container-max-widths: (
+          sm: 1176px,
+          md: 1176px,
+          lg: 1176px,
+          xl: 1176px
+  );
+}
+
+$grid-width : 1176px;
+
+
+////
+/// Variables
+////
+
+// Typography
+$font-family-base:      'Lato', 'Arial', sans-serif;
+$font-size-base:        rem(20);
+$line-height-base:      1.2;
+
+$h1-font-size:          rem(40);
+$h2-font-size:          rem(35);
+$h3-font-size:          rem(28);
+$h4-font-size:          rem(24);
+$h5-font-size:          rem(22);
+$h6-font-size:          $font-size-base; //20px
+
+$headings-font-weight:  bold;
+
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";

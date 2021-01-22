@@ -1,0 +1,381 @@
+.image-slider {
+	&__container {
+		@include make-container();
+		@include make-container-max-widths();
+	}
+
+	&__row {
+		@include make-row;
+		justify-content: center;
+	}
+
+	&__header {
+		text-align: center;
+		padding: 0 15px;
+
+		h4 {
+			color: $c-blue;
+			text-transform: uppercase;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: rem(16);
+			margin: 0 auto 40px;
+		}
+
+		@include media-breakpoint-up(md) {
+			p {
+				max-width: 70%;
+			}
+		}
+	}
+
+
+	.carousel {
+		overflow: hidden;
+		position: relative;
+		margin: 0 10px 20px;
+
+		text-align: center; // ??
+
+		.is-hidden {
+			opacity: 0.4;
+			pointer-events: none;
+		}
+
+		&__prev, &__next {
+			//cursor: pointer;
+			position: relative;
+			width: auto;
+			padding: 15px;
+			transition: 0.6s ease;
+			z-index: 10;
+			border: 0;
+			margin: 20px 20px 60px;
+
+			background: transparent;
+
+			text-align: center;
+			
+			outline: none;
+		
+
+			@include media-breakpoint-up(md) {
+			 // top: 50%;
+			}
+
+			&:before {
+				content: '';
+				width: 30px;
+				height: 30px;
+				transform: skew(-20deg);
+				background: #dadadd;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+		
+			&:after {
+			  content: '';
+			  height: 15px;
+			  width: 15px;
+			  background: url("icons/right-chevron-red.svg") 0 0 no-repeat;
+			  background-size: 15px;
+			  transition: 0.3s ease;
+			  position: absolute;
+			}
+		  }
+		
+		  &__next {
+			right: 20px;
+		
+			&:after {
+				right: 8px;
+				top: 7px;
+			}
+		  }
+		
+		  &__prev {
+			left: 20px;
+		
+			&:after {
+			  left: 8px;
+			  top: 7px;
+			  transform: rotate(180deg);
+			}
+		  }
+		
+		  &__prev:hover, &__next:hover {
+			//background-color: rgba(0,0,0,0.3);
+		  }
+		
+		  &__prev:hover {
+			&:after {
+			  left: 6px;
+			}
+		  }
+		
+		  &__next:hover {
+			&:after {
+			  right: 6px;
+			}
+		  }
+
+
+
+		&__items {
+			align-items: stretch;
+			text-align: center;
+		}
+
+		&__item {
+			position: relative;
+			padding: 0;
+			
+			margin: 0 10px 0;
+			border: 1px solid $c-grey-lighter;
+	  
+			&.active {
+			  background: #f5f5f5;
+			  border: 1px solid $c-red;
+			}
+
+			img {
+				width: 100%;
+			}
+
+			// &:after {
+			// 	content: '';
+			// 	width: 40px;
+			// 	height: 40px;
+			// 	background-color: $c-orange;
+			// 	position: absolute;
+			// 	bottom: 0;
+			// 	right: 0;
+			// }
+		}
+
+		&__link:link {
+			color: inherit;
+		}
+
+		&__slider {
+			.carousel__items {
+				display: flex;
+				position: relative;
+				
+				width: fit-content;
+				margin: 0 auto;
+
+				width: 4000px;
+				
+				&.shifting {
+				  transition: transform 1.3s ease;
+				}
+			}
+
+			.carousel__item {
+				width: 280px;
+			}
+		}	
+
+		&__blocks {
+			.carousel__item {
+				margin-bottom: 20px;
+
+				@include media-breakpoint-up(md) {
+					margin-bottom: 90px;
+				}
+			}
+		}
+		
+	  
+		&__image {
+			margin-bottom: 20px;
+
+			&--desktop {
+				display: none;
+			}
+		}
+
+		&__caption {
+			-webkit-user-select: none; /* Safari */        
+			-moz-user-select: none; /* Firefox */
+			-ms-user-select: none; /* IE10+/Edge */
+			user-select: none;
+
+			position: relative;
+
+			h3 {
+				font-size: em(22);
+				margin-bottom: 20px;
+				transition: color .35s;
+				text-transform: uppercase;
+				color: $c-blue-dark;
+			}
+
+			p {
+				font-size: em(16);
+				line-height: 16px;
+				margin:  0 10px 50px;
+			}	
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 10%;
+				bottom: -13px;
+				display: inline-block;
+				height: 1em;
+				width: 80%;
+				border-bottom: 2px solid $c-red;
+				opacity: 0;
+				-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				transition: opacity 0.35s, transform 0.35s;
+				-webkit-transform: scale(0,1);
+				transform: scale(0,1);
+			}
+		}
+
+		&__link {
+			display: block;
+			text-decoration: none;
+			// margin: 2px;
+			position: relative;
+			height: 100%;
+
+			p {
+				color: grey;
+			}
+
+			&:hover, &:focus {
+
+				h3 {
+					color: $c-red;
+				}
+
+				.carousel__caption {
+					&:after {
+						opacity: 1;
+						-webkit-transform: scale(1);
+						transform: scale(1);
+					}
+				}
+				
+			}
+		}
+
+		// &__nav {
+		// 	margin-bottom: 70px;
+
+		// 	&--dot {
+		// 		height: 5px;
+		// 		width: 10px;
+		// 		margin: 0;
+		// 		border-radius: 5px;
+		// 		border: none;
+		// 		outline-color: $c-orange;
+		// 		background-color: #979797;
+		// 		transition: all 0.8s ease;
+		// 		transition-property: background-color, width;
+		
+		// 		&:hover {
+		// 			background-color: $c-orange;
+		// 		}
+
+		// 		&.active {
+		// 			background-color: $c-orange;
+		// 			width: 54px;
+		// 		}
+
+		// 		@include media-breakpoint-up(md) {
+		// 			margin: 0 2px;
+		// 		}
+		// 	}
+
+		// 	@include media-breakpoint-up(lg) {
+		// 		margin-bottom: 80px;
+		// 	}
+		// }
+
+		@media (min-width: 1400px) {
+			margin: 0 0 20px;
+			
+			&__image {
+				margin-bottom: 20px;
+	
+				&--mobile {
+					display: none;
+				}
+	
+				&--desktop {
+					display: block;
+				}
+			}
+
+			&__caption {
+				h3 {
+					font-size: em(18);
+				}
+	
+				p {
+					font-size: em(16);
+					line-height: 20px;
+					margin:  0 25px 30px;
+				}
+				
+		
+			}
+		}
+
+		&__slider {
+			@media (min-width: 1400px) {
+				// @include make-col-ready();
+				// @include make-col(14);
+				padding: 0;
+
+				@media all and (-ms-high-contrast:none) {
+					@include make-col(12);
+				}
+
+				.carousel__item {
+					width: 270px;
+					margin: 0 7px 0;
+				}
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			&__blocks {
+				margin: 0 auto 60px;
+				
+
+				.carousel__items {
+					display: flex;
+					flex-wrap: wrap;
+					margin: 0 -12px;
+					justify-content: center;
+
+				}
+				.carousel__item {
+					width: 33%;
+					margin: 0 12px 50px;
+				}
+			}
+		}
+
+		@include media-breakpoint-up(xl) {
+			&__blocks {
+
+				.carousel__items {
+					flex-wrap: nowrap;
+				}
+			}
+		}
+	}
+}
+
+
+
+

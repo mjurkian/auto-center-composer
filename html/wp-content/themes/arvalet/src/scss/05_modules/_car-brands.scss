@@ -1,0 +1,45 @@
+.brands {
+
+	&__container {
+		@include make-container();
+		@include make-container-max-widths();
+	}
+
+	&__row {
+		@include make-row();
+		justify-content:  center;
+		align-items: center;
+
+		margin-bottom: 80px;
+
+		@include media-breakpoint-up(md) {
+			flex-wrap: nowrap;
+		}
+	}
+
+	&__header {
+		text-align: center;
+
+		h4 {
+			font-size: rem(20);
+			margin: 0 auto 20px;
+			text-transform: uppercase;
+			color: $c-blue;
+		}
+
+		@include media-breakpoint-up(md) {
+			p {
+				max-width: 40%;
+			}
+		}
+	}
+
+	&__item {
+		width: 33%;
+		text-align: center;
+
+		@include media-breakpoint-up(md) {
+			width: initial;
+		}
+	}
+}

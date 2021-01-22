@@ -1,0 +1,271 @@
+.contact {
+  
+  &__inner {
+    @include make-container();
+    @include make-container-max-widths();
+  }
+
+  &__row {
+    @include make-row();
+    margin: 30px 0;
+  }
+
+  &__left {
+    @include make-col-ready();
+    @include make-col(12);
+
+    h2 {
+      color: $c-red;
+      padding: 20px 0 10px;
+      margin-bottom: 25px;
+      font-weight: 400;
+      font-size: em(28);
+      border-bottom: 1px solid grey;
+    }
+
+    a:not(.button) {
+      transition: color ease .4s;
+      text-decoration: none;
+
+      &:hover {
+        color: $c-orange;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+      padding-right: 20px;
+      padding-left: 5px;
+    }
+
+    &--phone, &--envelope, &--address, &--fax {
+      margin-bottom: 10px;
+
+      a {
+        padding: 5px 0 5px 30px;
+        color: $c-blue-dark;
+        font-size: em(18);
+        transition: all ease .4s;
+        text-decoration: none;
+        border: 5px solid transparent;
+        border-radius: 5px;
+      }
+
+      .phone, .envelope, .address, .fax {
+        position: relative;
+
+        &:after {
+          content: '';
+          width: 18px;
+          height: 18px;
+          top: 2px;
+          left: 0;
+          position: absolute;
+        }
+      }
+
+      .phone {
+        &:after {
+          background: url("icons/call-purple.png") 0 0 no-repeat;
+          background-size: 18px;
+        }
+      }
+
+      .fax {
+        &:after {
+          background: url("icons/fax-purple.png") 0 0 no-repeat;
+          background-size: 18px;
+        }
+      }
+
+      .envelope {
+        &:after {
+          background: url("icons/envelope-purple.png") 0 0 no-repeat;
+          background-size: 18px;
+        }
+      }
+
+      .address {
+        &:after {
+          background: url("icons/location-purple.png") 0 0 no-repeat;
+          background-size: 18px;
+        }
+      }
+    }
+
+    &--address {
+      margin-bottom: 25px;
+      p {
+        padding-left: 35px;
+        font-size: em(18);
+      }
+    }
+
+  }
+
+  &.contact__left {
+     display: flex;
+     flex-direction: column;
+     text-align: left;
+     padding-bottom: 40px;
+   }
+
+  &__right {
+    @include make-col-ready();
+    @include make-col(12);
+
+    h2 {
+      color: $c-red;
+      padding: 20px 0 10px;
+      margin-bottom: 25px;
+      font-weight: 400;
+      font-size: em(28);
+      border-bottom: 1px solid grey;
+    }
+
+    @include media-breakpoint-up(md) {
+      @include make-col(8);
+      padding-right: 5px;
+      padding-left: 20px;
+    }
+
+
+    .wpcf7-response-output {
+      margin: 5em 0.5em 1em;
+      font-size: em(18);
+    }
+  }
+}
+
+iframe {
+  margin-bottom: -5px;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: -10px;
+  }
+
+}
+
+form {
+
+  .ajax-loader {
+      display: none !important;
+  }
+
+  span.wpcf7-not-valid-tip {
+    font-size: em(16);
+  }
+
+  a {
+      color: $c-blue-dark;
+      transition: color ease .4s;
+      text-decoration: none;
+
+      &:hover {
+          color: $c-blue-light;
+      }
+  }
+
+  ::-webkit-input-placeholder { /* WebKit browsers */
+      color: #000 !important;
+      font-size: 12px;
+      opacity: .5;
+  }
+  :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+      color: #000 !important;
+      font-size: 12px;
+      opacity: .5;
+  }
+  ::-moz-placeholder { /* Mozilla Firefox 19+ */
+      color: #000 !important;
+      font-size: 12px;
+      opacity: .5;
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10+ */
+      color: #000 !important;
+      font-size: 12px;
+      opacity: .5;
+  }
+
+  div.contact-row {
+
+    label {
+      margin-bottom: 25px;
+    }
+
+      @include media-breakpoint-up(md) {
+          display: flex;
+          justify-content: space-between;
+
+          label:first-of-type {
+              margin-right: 20px;
+             // margin-bottom: 25px;
+          }
+
+          .heard-about-us {
+              select {
+                  width: 100%;
+                  background-color: white;
+              }
+          }
+      }
+  }
+
+  label.enquiry {
+      margin-top: 10px;
+      span {
+          textarea {
+              margin-top: 10px;
+          }
+      }
+  }
+
+  label {
+      width: 100%;
+  }
+  span {
+      &.your-name, &.your-email, &.your-car, &.your-phone, &.your-message {
+          input {
+              padding: 8px 0;
+          }
+
+          textarea {
+              padding: 8px;              
+          }
+
+          input, textarea {
+              width: 100%;
+              font-size: em(16);
+          }
+      }
+
+      &.your-message {
+         // border: 1px solid #929292;
+      }
+
+      &.your-name, &.your-email, &.your-car, &.your-phone {
+          input, textarea {
+              border: none;
+              border-bottom: 1px solid #929292;
+          }
+      }
+  }
+
+  input.wpcf7-submit {
+      padding: 8px 25px;
+      transition: all 0.4s ease;
+      background: $c-blue-dark;
+      color: white;
+      border: 1px solid $c-blue-dark;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin: 10px 0;
+      float: right;
+      border-radius: 5px;
+
+      &:hover {
+          background: $c-orange;
+          border: 1px solid $c-orange;
+      }
+  }
+}

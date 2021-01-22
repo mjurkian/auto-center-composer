@@ -1,0 +1,666 @@
+@mixin bg-sprite {
+	background: url("images/bg-sprite.svg") no-repeat;
+	.no-svg & {
+	  background-image: url("images/bg-sprite.png");
+	}
+  }
+  
+  @mixin icons-sprite {
+	background: url("images/icons_sprite.svg") no-repeat;
+	.no-svg & {
+	  background-image: url("images/icons_sprite.png");
+	}
+  }
+  
+  
+  @mixin sprite-icon-arrow-back {
+	@include bg-sprite;
+	background-position: 99.33774834437087% 45.741601023362286%;
+	width: 23px;
+	height: 20.94px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-back-large {
+	@include bg-sprite;
+	background-position: 30.24803387779794% 72.10884353741497%;
+	width: 27.46px;
+	height: 24px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-back-white {
+	@include bg-sprite;
+	background-position: 99.33774834437087% 76.01831279876119%;
+	width: 23px;
+	height: 20.94px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-down {
+	@include bg-sprite;
+	background-position: 98.99683210137275% 68.75254237288135%;
+	width: 21.96px;
+	height: 23px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-down-large {
+	@include bg-sprite;
+	background-position: 67.5813953488372% 83.29317821986645%;
+	width: 24px;
+	height: 27.46px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-down-white {
+	@include bg-sprite;
+	background-position: 98.99683210137275% 38.264406779661016%;
+	width: 21.96px;
+	height: 23px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-forward {
+	@include bg-sprite;
+	background-position: 99.33774834437087% 30.94997643573689%;
+	width: 23px;
+	height: 20.94px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-forward-large {
+	@include bg-sprite;
+	background-position: 39.4770451031794% 72.10884353741497%;
+	width: 27.46px;
+	height: 24px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-forward-white {
+	@include bg-sprite;
+	background-position: 99.33774834437087% 16.158351848111494%;
+	width: 23px;
+	height: 20.94px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-up {
+	@include bg-sprite;
+	background-position: 98.66473722291653% 8.474576271186441%;
+	width: 20.94px;
+	height: 23px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-up-large {
+	@include bg-sprite;
+	background-position: 71.76079734219269% 60.62693765070616%;
+	width: 24px;
+	height: 27.7px;
+  }
+  
+  
+  @mixin sprite-icon-arrow-up-white {
+	@include bg-sprite;
+	background-position: 98.66473722291653% 91.44406779661017%;
+	width: 20.94px;
+	height: 23px;
+  }
+  
+  
+  @mixin sprite-icon-article {
+	@include bg-sprite;
+	background-position: 0 62.4113475177305%;
+	width: 36px;
+	height: 36px;
+  }
+  
+  
+  @mixin sprite-icon-calendar {
+	@include bg-sprite;
+	background-position: 62.28373702422145% 62.4113475177305%;
+	width: 36px;
+	height: 36px;
+  }
+  
+  
+  @mixin sprite-icon-chart {
+	@include bg-sprite;
+	background-position: 49.826989619377166% 62.4113475177305%;
+	width: 36px;
+	height: 36px;
+  }
+  
+  
+  @mixin sprite-icon-checkbox {
+	@include bg-sprite;
+	background-position: 69.96466431095406% 30.434782608695652%;
+	width: 42px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-checkbox-ticked {
+	@include bg-sprite;
+	background-position: 15.547703180212014% 48.55072463768116%;
+	width: 42px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-double-back {
+	@include bg-sprite;
+	background-position: 99.74399042457692% 0;
+	width: 24.23px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-double-forward {
+	@include bg-sprite;
+	background-position: 91.43199122252885% 33.43344709897611%;
+	width: 24.23px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-down {
+	@include bg-sprite;
+	background-position: 91.66666666666667% 26.665555740709884%;
+	width: 25px;
+	height: 17.95px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-down-large {
+	@include bg-sprite;
+	background-position: 81.91126279863481% 44.036448629788964%;
+	width: 32px;
+	height: 22.79px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-down-large-white {
+	@include bg-sprite;
+	background-position: 81.91126279863481% 51.75637681650351%;
+	width: 32px;
+	height: 22.79px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-down-white {
+	@include bg-sprite;
+	background-position: 48.30666666666667% 70.65489085152474%;
+	width: 25px;
+	height: 17.95px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-left {
+	@include bg-sprite;
+	background-position: 6.1120543293718175% 92.83276450511946%;
+	width: 18.72px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-left-white {
+	@include bg-sprite;
+	background-position: 0 92.83276450511946%;
+	width: 18.72px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-right {
+	@include bg-sprite;
+	background-position: 82.4147838579078% 82.5938566552901%;
+	width: 18.72px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-right-white {
+	@include bg-sprite;
+	background-position: 41.79182447433721% 31.399317406143346%;
+	width: 18.72px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-up {
+	@include bg-sprite;
+	background-position: 91.66666666666667% 62.32624966586475%;
+	width: 25px;
+	height: 18.72px;
+  }
+  
+  
+  @mixin sprite-icon-chevron-up-white {
+	@include bg-sprite;
+	background-position: 91.66666666666667% 56.07123763699546%;
+	width: 25px;
+	height: 18.72px;
+  }
+  
+  
+  @mixin sprite-icon-close {
+	@include bg-sprite;
+	background-position: 82.75862068965517% 0;
+	width: 35px;
+	height: 35px;
+  }
+  
+  
+  @mixin sprite-icon-close-small {
+	@include bg-sprite;
+	background-position: 91.66666666666667% 48.74061433447099%;
+	width: 25px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-close-small-white {
+	@include bg-sprite;
+	background-position: 0 100%;
+	width: 21px;
+	height: 21px;
+  }
+  
+  
+  @mixin sprite-icon-close-white {
+	@include bg-sprite;
+	background-position: 82.75862068965517% 12.36749116607774%;
+	width: 35px;
+	height: 35px;
+  }
+  
+  
+  @mixin sprite-icon-download {
+	@include bg-sprite;
+	background-position: 53.380782918149464% 30.434782608695652%;
+	width: 44px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-download-small {
+	@include bg-sprite;
+	background-position: 75.80666666666667% 83.06731198297464%;
+	width: 25px;
+	height: 26.67px;
+  }
+  
+  
+  @mixin sprite-icon-download-small-white {
+	@include bg-sprite;
+	background-position: 91.66666666666667% 0;
+	width: 25px;
+	height: 26.67px;
+  }
+  
+  
+  @mixin sprite-icon-drop-pin {
+	@include bg-sprite;
+	background-position: 43.986254295532646% 48.55072463768116%;
+	width: 34px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-email {
+	@include bg-sprite;
+	background-position: 20.29520295202952% 33.333333333333336%;
+	width: 54px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-email-white {
+	@include bg-sprite;
+	background-position: 0 33.333333333333336%;
+	width: 55px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-facebook {
+	@include bg-sprite;
+	background-position: 78.54431208273334% 60.96527777777778%;
+	width: 19.44px;
+	height: 30px;
+  }
+  
+  
+  @mixin sprite-icon-facebook-white {
+	//@include bg-sprite;
+	//background-position: 71.0171488414714% 14.583333333333334%;
+	//width: 19.44px;
+	//height: 30px;
+	@include icons-sprite;
+	background-position: 14.814814814814815% 0;
+	width: 46px;
+	height: 46px;
+  }
+  
+  
+  @mixin sprite-icon-googleplus {
+	@include bg-sprite;
+	background-position: 81.91126279863481% 34.72222222222222%;
+	width: 32px;
+	height: 30px;
+  }
+  
+  
+  @mixin sprite-icon-googleplus-white {
+	@include bg-sprite;
+	background-position: 81.91126279863481% 24.305555555555557%;
+	width: 32px;
+	height: 30px;
+  }
+  
+  
+  @mixin sprite-icon-graph {
+	@include bg-sprite;
+	background-position: 37.37024221453287% 62.4113475177305%;
+	width: 36px;
+	height: 36px;
+  }
+  
+  
+  @mixin sprite-icon-linkedin {
+	@include bg-sprite;
+	background-position: 40.36867918146457% 84.02777777777777%;
+	width: 29.35px;
+	height: 30px;
+  }
+  
+  
+  @mixin sprite-icon-linkedin-white {
+	//@include bg-sprite;
+	//background-position: 20.294266869609338% 84.02777777777777%;
+	//width: 29.35px;
+	//height: 30px;
+	@include icons-sprite;
+	background-position: 0 100%;
+	width: 46px;
+	height: 46px;
+  }
+  
+  
+  @mixin sprite-icon-loader {
+	@include bg-sprite;
+	background-position: 30.3886925795053% 48.55072463768116%;
+	width: 42px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-microphone {
+	@include bg-sprite;
+	background-position: 54.36241610738255% 48.55072463768116%;
+	width: 27px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-minus {
+	@include bg-sprite;
+	background-position: 99.33774834437087% 83.64745762711864%;
+	width: 23px;
+	height: 23px;
+  }
+  
+  
+  @mixin sprite-icon-minus-white {
+	@include bg-sprite;
+	background-position: 99.33774834437087% 23.36949152542373%;
+	width: 23px;
+	height: 23px;
+  }
+  
+  
+  @mixin sprite-icon-my-slip-case {
+	@include bg-sprite;
+	background-position: 54.151624548736464% 0;
+	width: 48px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-my-slip-case-white {
+	@include bg-sprite;
+	background-position: 54.151624548736464% 15.217391304347826%;
+	width: 48px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-phone {
+	@include bg-sprite;
+	background-position: 69.47368421052632% 45.65217391304348%;
+	width: 40px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-play {
+	@include bg-sprite;
+	background-position: 69.96466431095406% 0;
+	width: 42px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-play-large {
+	@include bg-sprite;
+	background-position: 0 0;
+	width: 92px;
+	height: 92px;
+  }
+  
+  
+  @mixin sprite-icon-plus {
+	@include bg-sprite;
+	background-position: 99.33774834437087% 53.159322033898306%;
+	width: 23px;
+	height: 23px;
+  }
+  
+  
+  @mixin sprite-icon-plus-white {
+	@include bg-sprite;
+	background-position: 99.33774834437087% 60.95593220338983%;
+	width: 23px;
+	height: 23px;
+  }
+  
+  
+  @mixin sprite-icon-press-release {
+	@include bg-sprite;
+	background-position: 24.913494809688583% 62.4113475177305%;
+	width: 36px;
+	height: 36px;
+  }
+  
+  
+  @mixin sprite-icon-print {
+	@include bg-sprite;
+	background-position: 34.20074349442379% 15.217391304347826%;
+	width: 56px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-scroll-up-arrow {
+	@include bg-sprite;
+	background-position: 64.70588235294117% 15.217391304347826%;
+	width: 19px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-scroll-up-arrow-white {
+	//@include bg-sprite;
+	//background-position: 35.62091503267974% 33.333333333333336%;
+	//width: 19px;
+	//height: 42px;
+	@include icons-sprite;
+	background-position: 0 0;
+	width: 16px;
+	height: 58px;
+  }
+  
+  
+  @mixin sprite-icon-search {
+	@include bg-sprite;
+	background-position: 49.95968283832818% 83.44827586206897%;
+	width: 27.36px;
+	height: 28px;
+  }
+  
+  
+  @mixin sprite-icon-search-small {
+	@include bg-sprite;
+	background-position: 91.35605607600824% 70.05119453924915%;
+	width: 23.98px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-search-small-white {
+	@include bg-sprite;
+	background-position: 91.35605607600824% 78.58361774744027%;
+	width: 23.98px;
+	height: 25px;
+  }
+  
+  
+  @mixin sprite-icon-search-white {
+	@include bg-sprite;
+	background-position: 59.151995699502756% 83.44827586206897%;
+	width: 27.36px;
+	height: 28px;
+  }
+  
+  
+  @mixin sprite-icon-share {
+	@include bg-sprite;
+	background-position: 10.169491525423728% 84.02777777777777%;
+	width: 30px;
+	height: 30px;
+  }
+  
+  
+  @mixin sprite-icon-share-white {
+	@include bg-sprite;
+	background-position: 0 84.02777777777777%;
+	width: 30px;
+	height: 30px;
+  }
+  
+  
+  @mixin sprite-icon-twitter {
+	@include bg-sprite;
+	background-position: 20.338983050847457% 72.70731874614171%;
+	width: 30px;
+	height: 26.42px;
+  }
+  
+  
+  @mixin sprite-icon-twitter-white {
+	//@include bg-sprite;
+	//background-position: 10.169491525423728% 72.70731874614171%;
+	//width: 30px;
+	//height: 26.42px;
+	@include icons-sprite;
+	background-position: 42.592592592592595% 100%;
+	width: 46px;
+	height: 46px;
+  }
+  
+  
+  @mixin sprite-icon-upload {
+	@include bg-sprite;
+	background-position: 0 48.55072463768116%;
+	width: 44px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-upload-small {
+	@include bg-sprite;
+	background-position: 91.66666666666667% 9.154566985892288%;
+	width: 25px;
+	height: 26.67px;
+  }
+  
+  
+  @mixin sprite-icon-upload-small-white {
+	@include bg-sprite;
+	background-position: 91.66666666666667% 18.309133971784576%;
+	width: 25px;
+	height: 26.67px;
+  }
+  
+  
+  @mixin sprite-icon-video {
+	@include bg-sprite;
+	background-position: 12.456747404844291% 62.4113475177305%;
+	width: 36px;
+	height: 36px;
+  }
+  
+  
+  @mixin sprite-icon-view {
+	@include bg-sprite;
+	background-position: 34.45692883895131% 0;
+	width: 58px;
+	height: 42px;
+  }
+  
+  
+  @mixin sprite-icon-view-small {
+	@include bg-sprite;
+	background-position: 12.48% 91.22924702331042%;
+	width: 25px;
+	height: 19.85px;
+  }
+  
+  
+  @mixin sprite-icon-view-small-white {
+	@include bg-sprite;
+	background-position: 91.66666666666667% 41.240986080831796%;
+	width: 25px;
+	height: 19.85px;
+  }
+  
+  
+  @mixin sprite-icon-youtube {
+	@include bg-sprite;
+	background-position: 30.28813559322034% 84.02777777777777%;
+	width: 30px;
+	height: 30px;
+  }
+  
+  
+  @mixin sprite-icon-youtube-white {
+	//@include bg-sprite;
+	//background-position: 0 73.61111111111111%;
+	//width: 30px;
+	//height: 30px;
+	@include icons-sprite;
+	background-position: 100% 0;
+	width: 46px;
+	height: 46px;
+  }
+  
+  
+  @mixin sprite-icon-instagram-white {
+	@include icons-sprite;
+	background-position: 57.407407407407405% 0;
+	width: 46px;
+	height: 46px;
+  }
+  

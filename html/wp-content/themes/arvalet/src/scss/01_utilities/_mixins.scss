@@ -1,0 +1,108 @@
+$media: "mobile-first";
+$bp1: null;
+$bp2: null;
+$bp3: null;
+$bp4: null;
+$bpPrefix: null;
+
+@if $media == "desktop-first" {
+    $bp1: 1200px;
+    $bp2: 992px;
+    $bp3: 768px;
+    $bp4: 400px;
+    $bpPrefix: max-width;
+} @else if $media == "mobile-first" {
+    $bp1: 400px;
+    $bp2: 768px;
+    $bp3: 992px;
+    $bp4: 1200px;
+    $bpPrefix: min-width;
+}
+
+@mixin bp($point) {
+
+    @if $media == "desktop-first" {
+
+        @if $point == bp-1 {
+            @media (max-width: $bp1) {
+                @content;
+            }
+        } @else if $point == bp-2 {
+            @media (max-width: $bp2) {
+                @content;
+            }
+        } @else if $point == bp-3 {
+            @media (max-width: $bp3) {
+                @content;
+            }
+        } @else if $point == bp-4 {
+            @media (max-width: $bp4) {
+                @content;
+            }
+        }
+
+    } @else if $media == "mobile-first" {
+
+        @if $point == bp-1 {
+            @media (min-width: $bp1) {
+                @content;
+            }
+        } @else if $point == bp-2 {
+            @media (min-width: $bp2) {
+                @content;
+            }
+        } @else if $point == bp-3 {
+            @media (min-width: $bp3) {
+                @content;
+            }
+        } @else if $point == bp-4 {
+            @media (min-width: $bp4) {
+                @content;
+            }
+        }
+
+    }
+}
+
+@mixin web-font($font-name, $file-path, $file-name, $font-weight: "normal", $font-style: "normal") {
+    $full-path: $file-path + $file-name;
+    @font-face {
+      font-family: '#{$font-name}';
+      font-weight: #{$font-weight};
+      font-style: #{$font-style};
+      src: local('#{$full-path}'),
+           url('#{$full-path}.woff2') format('woff2'),
+           url('#{$full-path}.woff') format('woff'),
+           url('#{$full-path}.ttf') format('truetype');
+      font-display: swap;
+    }
+  }
+  
+
+/** Convert PX to EM **/
+$browser-context: 16 !default; // Default
+
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+};
+
+@mixin accessible-hidden {
+    // Text replacement / Image replacement technique - A nicer hide text -9999px alternative
+    border: 0;
+    background-color: transparent;
+    text-shadow: none;
+    color: transparent;
+    font: 0/0 a;
+  
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+  
