@@ -18,6 +18,7 @@ const config = module.exports = {
   strict: false
 }
 
+
 /**
  * ----------------
  * Optional config
