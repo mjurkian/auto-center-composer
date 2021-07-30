@@ -13,7 +13,7 @@
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-    
+
     <!--[if IE]>
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
     <![endif]-->
@@ -64,14 +64,14 @@
             </div>
 
             <div class="header__logo">
-                <a href="/"> 
-                    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/Arvalet-Logo.png" alt="Arvalet Logo"> 
+                <a href="/">
+                    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/Arvalet-Logo.png" alt="Arvalet Logo">
                 </a>
             </div>
 
             <div class="header__nav">
                 <div class="header__nav--appointment">
-                    <a href="/contact/">Make an Appointment</a>
+                    <a href="/contact/">Book an Appointment</a>
                 </div>
                 <nav class="nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
                     <?php
@@ -81,7 +81,7 @@
                     ?>
                 </nav>
             </div>
-            
+
         </div>
     </div>
 </header>

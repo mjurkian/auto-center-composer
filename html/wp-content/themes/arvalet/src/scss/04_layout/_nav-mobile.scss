@@ -117,11 +117,11 @@
     background-color: $c-blue;
     overflow: hidden;
     transition: height 0.5s;
-  
+
     &.active {
       height: 100%;
     }
-  
+
     &--appointment {
       padding-top: 150px;
       margin: 0 auto;
@@ -141,43 +141,43 @@
         outline: none;
       }
     }
-  
+
     .nav {
       @include make-container();
       @include make-container-max-widths();
     }
-    
+
     .menu-main-menu-container {
       position: relative;
       padding: 40px 0 0 20px;
     }
-  
+
     ul {
       list-style: none;
       padding: 0;
-  
+
       li {
         padding:0 40px 25px 0;
-  
+
         a {
           color: $c-white;
           text-decoration: none;
           font-size: em(28);
           position: relative;
         }
-  
+
         &.current-menu-item {
           > a {
             color: $c-orange-light;
           }
         }
-  
+
         &.menu-item-has-children {
           > a:after {
             content: '';
             width: 40px;
             height: 40px;
-  
+
             background-image: url(icons/right-chevron.svg);
             background-size: cover;
             transform: scale(.4);
@@ -189,7 +189,7 @@
         }
       }
     }
-  
+
     ul.sub-menu {
       height: 100%;
       width: 100%;
@@ -201,19 +201,19 @@
       overflow-x: hidden;
       transform: translateX(100%);
       transition: transform 0.5s;
-  
+
       > li {
         position: relative;
         top: 150px;
         left: 40px;
       }
-  
+
       li {
         @include make-container-max-widths();
         @include make-container();
         padding-right: 55px;
       }
-  
+
       li.menu-item__return {
         button {
           color: $c-red;
@@ -221,10 +221,10 @@
           background: transparent;
         }
       }
-  
+
       &.open {
         transform: translateX(0);
       }
     }
-  }  
+  }
 }

@@ -32,7 +32,7 @@ $youtube = get_field('youtube', 'options');
                     <p>Phone: <a  href="tel:<?php echo str_replace(' ', '', $phone_link_number); ?>"> <?php echo $info_phone; ?></a></p>
                     <p>Fax: <a  href="fax:<?php echo str_replace(' ', '', $phone_link_mobile); ?>"> <?php echo $info_mobile; ?></a></p>
                 </div>
-                
+
             </div>
             <div class="footer__info--email">
                 <i class="icon email"></i>
@@ -59,10 +59,10 @@ $youtube = get_field('youtube', 'options');
                     <p><?php echo $about; ?></p>
 
                     <div class="appointment">
-                        <a class="button" href="/contact/">Make an Appointment<i class="arrow"></i></a>
+                        <a class="button" href="/contact/">Book an Appointment<i class="arrow"></i></a>
                     </div>
                 </div>
-                
+
                 <div class="footer__main--block">
                     <div class="footer__main--menu">
                         <h4><?php echo $left_menu_header; ?></h4>
@@ -119,14 +119,14 @@ $youtube = get_field('youtube', 'options');
     <div class="footer__copyright">
         <div class="footer__copyright--container">
             <div class="footer__copyright--text">
-                <p><?php echo $copyright;  ?></p>                                
+                <p><?php echo $copyright;  ?></p>
             </div>
             <div class="footer__copyright--menu">
                 <?php
                     wp_nav_menu( array(
                         'menu' => 'Footer Menu Copyright'
                     ) );
-                ?>                               
+                ?>
             </div>
         </div>
     </div>
