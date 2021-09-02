@@ -67,9 +67,9 @@ Ensure code is developed to WordPress [best practices](https://make.wordpress.or
 
 ### Theme development
 - Use Sass to compile css:
-    - **Sass source:** ```html/wp-content/themes/beazley/assets/scss```
-    - **Css destination:** ```html/wp-content/themes/beazley/assets/css```
-- Advanced Custom Fields (ACF) to be exported to JSON:  ```html/wp-content/themes/beazley/assets/acf-json```
+    - **Sass source:** ```html/wp-content/themes/arvalet/assets/scss```
+    - **Css destination:** ```html/wp-content/themes/arvalet/assets/css```
+- Advanced Custom Fields (ACF) to be exported to JSON:  ```html/wp-content/themes/arvalet/assets/acf-json```
 
 ### Plugin development
 - Set code style/standards to WordPress
