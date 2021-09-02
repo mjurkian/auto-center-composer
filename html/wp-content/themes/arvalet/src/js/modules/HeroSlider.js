@@ -127,7 +127,7 @@ const Carousel = (() => {
     });
 
     for (let i = 0; i < DOM.dots.length; i++) {
-      DOM.dots[i].addEventListener('click',  (e) => {
+      DOM.dots[i].addEventListener('click', (e) => {
         e.stopPropagation();
         e.preventDefault();
         dotsNav(e);

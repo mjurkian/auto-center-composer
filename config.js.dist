@@ -31,8 +31,3 @@ config.browserSync = {
   proxy: "http://arvalet.local",
   files: ["*.css", "*.js"]
 }
-
-// Add JS source paths here for Babel loader
-config.jsSrcPaths = [
-  path.resolve(__dirname, "node_modules/@kukidigital/kuki-accordion")
-]

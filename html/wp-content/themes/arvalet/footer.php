@@ -90,23 +90,23 @@ $youtube = get_field('youtube', 'options');
 
                     <ul>
                         <?php
-                        if ($facebook != '') { ?>
+                        if ($facebook !== '') { ?>
                             <li class="facebook"><a href="<?php echo $facebook; ?>" target="_blank"></a></li>
                         <?php }
 
-                        if ($twitter != '') { ?>
+                        if ($twitter !== '') { ?>
                             <li class="twitter"><a href="<?php echo $twitter; ?>" target="_blank"></a></li>
                         <?php }
 
-                        if ($instagram != '') { ?>
+                        if ($instagram !== '') { ?>
                             <li class="instagram"><a href="<?php echo $instagram; ?>" target="_blank"></a></li>
                         <?php }
 
-                        if ($linkedin != '') { ?>
+                        if ($linkedin !=='') { ?>
                             <li class="linkedin"><a href="<?php echo $linkedin; ?>" target="_blank" title="Opens in a new window"></a></li>
                         <?php }
 
-                        if ($youtube != '') { ?>
+                        if ($youtube !== '') { ?>
                             <li class="youtube"><a href="<?php echo $youtube; ?>" target="_blank"></a></li>
                         <?php } ?>
                     </ul>
